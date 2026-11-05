@@ -1,0 +1,21 @@
+{
+  "name": "mayorista-lt-del-llano",
+  "version": "1.0.0",
+  "description": "Tienda + asesor con IA",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/api.test.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3",
+    "sharp": "^0.33.5"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

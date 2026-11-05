@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Fotos del catálogo | Admin LT del Llano</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--azul:#1A3E8F;--azul-dark:#122d6b;--dorado:#C9A84C;--pale:#f5ecd0;--bg:#f7f6f2;--borde:#e8e6de;--gris:#666;--ok:#22a861;--warn:#d98a00;--err:#d93636}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:#222;font-size:14px}
+header{background:var(--azul-dark);color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header h1{font-size:18px}header h1 span{color:var(--dorado)}
+header a{color:#e4c97e;font-size:13px}
+main{max-width:1200px;margin:0 auto;padding:22px 16px 60px}
+.card{background:#fff;border:1.5px solid var(--borde);border-radius:16px;padding:18px}
+#login{max-width:420px;margin:60px auto;text-align:center}
+#login h2{margin-bottom:6px;color:var(--azul)}#login p{color:var(--gris);margin-bottom:16px}
+input[type=password],input[type=search],select{width:100%;padding:11px 14px;border:1.5px solid #e2e0d8;border-radius:10px;font:inherit}
+button{font:inherit;cursor:pointer;border:none;border-radius:50px;padding:9px 16px;font-weight:600;background:var(--azul);color:#fff}
+button.ghost{background:#fff;color:var(--azul);border:1.5px solid var(--azul)}
+button.ok{background:var(--ok)}button.bad{background:#fff;color:var(--err);border:1.5px solid #f0c2c2}
+button:disabled{opacity:.5;cursor:wait}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.stat b{display:block;font-size:26px;color:var(--azul)}.stat span{color:var(--gris);font-size:12px}
+.bar{height:8px;background:#eee;border-radius:9px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:var(--ok)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.tools input{flex:1;min-width:200px}.tools select{width:auto}
+.row{display:grid;grid-template-columns:84px 1fr auto;gap:14px;align-items:start;padding:14px;border-bottom:1px solid #f0ede5}
+.thumb{width:84px;height:84px;border-radius:12px;border:1.5px solid var(--borde);background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#bbb;font-size:11px;text-align:center}
+.thumb img{width:100%;height:100%;object-fit:contain}
+.name{font-weight:600}.sub{color:var(--gris);font-size:12px;margin-top:2px}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:50px;margin-top:6px;margin-right:4px}
+.b-aprobada{background:#eafaf1;color:#16653b}.b-sin_imagen{background:#f1f1f1;color:#666}.b-pendiente_revision{background:#fff4dc;color:#8a5a00}.b-rechazada{background:#fdecec;color:#8a1f1f}
+.b-alta{background:#e3ecff;color:var(--azul)}.b-media{background:#fff4dc;color:#8a5a00}.b-baja{background:#f1f1f1;color:#666}
+.acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.sugs{grid-column:2/4;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-top:4px}
+.sug{border:1.5px solid var(--borde);border-radius:12px;padding:8px;background:#fcfbf8;font-size:11px}
+.sug img{width:100%;height:120px;object-fit:contain;background:#fff;border-radius:8px;margin-bottom:6px}
+.sug a{color:var(--azul);word-break:break-word}.sug .acts{justify-content:flex-start;margin-top:6px}.sug button{padding:5px 10px;font-size:12px}
+.credit{font-size:11px;color:var(--gris);margin-top:4px}
+#msg{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0e1e47;color:#fff;padding:10px 18px;border-radius:50px;display:none;z-index:9;max-width:90%}
+.note{background:var(--pale);border-radius:12px;padding:12px 14px;margin-bottom:16px;font-size:13px;line-height:1.5}
+@media(max-width:700px){.stats{grid-template-columns:1fr 1fr}.row{grid-template-columns:64px 1fr}.thumb{width:64px;height:64px}.acts{grid-column:1/3;justify-content:flex-start}.sugs{grid-column:1/3}}
+</style>
+</head>
+<body>
+<header><h1>Mayorista LT <span>·</span> Fotos del catálogo</h1><a href="/">← Ver tienda</a></header>
+<main>
+  <div id="login" class="card">
+    <h2>Acceso de administrador</h2>
+    <p>Escribe la clave ADMIN_TOKEN configurada en el servidor.</p>
+    <form onsubmit="event.preventDefault();login()"><input type="password" id="tok" autocomplete="current-password" placeholder="Clave de administrador" required><br><br><button>Entrar</button></form>
+    <p id="login-err" style="color:var(--err);margin-top:12px"></p>
+  </div>
+
+  <div id="app" hidden>
+    <div class="stats">
+      <div class="card stat"><b id="s-cov">0%</b><span>Cobertura con foto aprobada</span><div class="bar"><i id="s-bar" style="width:0"></i></div></div>
+      <div class="card stat"><b id="s-con">0</b><span>Productos con foto</span></div>
+      <div class="card stat"><b id="s-pend">0</b><span>Sugerencias por revisar</span></div>
+      <div class="card stat"><b id="s-sin">0</b><span>Sin foto</span></div>
+    </div>
+    <div class="note">✅ <b>Lo más confiable:</b> sube tus propias fotos (con el celular sirve: producto sobre fondo claro). Se recortan a 800×800, se centran en fondo blanco y se convierten a WebP automáticamente.<br>
+    🔎 Las <b>sugerencias</b> vienen de Wikimedia Commons (solo licencias libres; se muestra el crédito al autor). Nunca se publican solas: tú las apruebas. No son fotos oficiales de la marca, así que úsalas solo cuando la foto represente de verdad el producto.</div>
+    <div class="tools">
+      <input type="search" id="q" placeholder="Buscar producto…" oninput="draw()">
+      <select id="f" onchange="draw()"><option value="">Todos</option><option value="sin_imagen">Sin foto</option><option value="pendiente_revision">Por revisar</option><option value="aprobada">Con foto</option><option value="rechazada">Rechazadas</option></select>
+      <button class="ghost" id="batch" onclick="batch()">🔎 Buscar sugerencias (lote de 10)</button>
+      <button class="ghost" onclick="csv()">⬇ Reporte CSV</button>
+    </div>
+    <div class="card" style="padding:0" id="list"></div>
+  </div>
+</main>
+<div id="msg" role="status"></div>
+<input type="file" id="file" accept="image/png,image/jpeg,image/webp,image/avif" hidden>
+<script>
+let TOKEN = sessionStorage.getItem('lt_admin') || '', DATA = null, upId = null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(t){ const m = $('#msg'); m.textContent = t; m.style.display = 'block'; clearTimeout(toast.t); toast.t = setTimeout(() => m.style.display = 'none', 3500); }
+async function api(path, body){
+  const r = await fetch('/api/admin/' + path, {method: body ? 'POST' : 'GET', headers: {'Authorization': 'Bearer ' + TOKEN, ...(body ? {'Content-Type':'application/json'} : {})}, body: body ? JSON.stringify(body) : undefined});
+  const d = await r.json().catch(() => ({}));
+  if (r.status === 401){ sessionStorage.removeItem('lt_admin'); TOKEN = ''; show(false); throw new Error('Sesión inválida'); }
+  if (!r.ok) throw new Error(d.error || 'Error ' + r.status);
+  return d;
+}
+function show(on){ $('#login').hidden = on; $('#app').hidden = !on; }
+async function login(){ TOKEN = $('#tok').value.trim(); try { await load(); sessionStorage.setItem('lt_admin', TOKEN); } catch(e){ $('#login-err').textContent = e.message; } }
+async function load(){ DATA = await api('images'); show(true); draw(); }
+function draw(){
+  const d = DATA; $('#s-cov').textContent = d.cobertura + '%'; $('#s-bar').style.width = d.cobertura + '%';
+  $('#s-con').textContent = d.con_imagen; $('#s-pend').textContent = d.pendientes_revision; $('#s-sin').textContent = d.total - d.con_imagen;
+  const q = $('#q').value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''), f = $('#f').value;
+  const rows = d.rows.filter(r => (!f || r.status === f) && (!q || (r.nombre + ' ' + r.cat).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').includes(q)));
+  $('#list').innerHTML = rows.map(r => `
+    <div class="row" id="r${r.id}">
+      <div class="thumb">${r.img ? `<img src="${esc(r.img)}" alt="">` : 'Sin foto'}</div>
+      <div><div class="name">#${r.id} · ${esc(r.nombre)}</div><div class="sub">${esc(r.sub)} · ${esc(r.cat)}${r.marca ? ' · Marca: ' + esc(r.marca) : ''}</div>
+        <span class="badge b-${r.status}">${({aprobada:'Con foto',sin_imagen:'Sin foto',pendiente_revision:'Por revisar',rechazada:'Rechazada'})[r.status] || r.status}</span>
+        ${r.status === 'aprobada' && r.confidence ? `<span class="badge b-${r.confidence}">Confianza ${r.confidence}</span>` : ''}
+        ${r.credit ? `<div class="credit">${esc(r.credit)}</div>` : ''}${r.searched && !(r.suggestions || []).length && r.status !== 'aprobada' ? '<div class="credit">Sin sugerencias con licencia libre: sube una foto propia.</div>' : ''}
+      </div>
+      <div class="acts">
+        <button onclick="pick(${r.id})">${r.img ? 'Reemplazar foto' : 'Subir foto'}</button>
+        <button class="ghost" onclick="suggest(${r.id}, this)">Sugerencias</button>
+        ${r.img ? `<button class="bad" onclick="removeImg(${r.id})">Quitar</button>` : ''}
+      </div>
+      ${(r.suggestions || []).length && r.status !== 'aprobada' ? `<div class="sugs">${r.suggestions.map((s, i) => `
+        <div class="sug"><img src="${esc(s.imagen)}" alt="" loading="lazy">
+          <span class="badge b-${s.confidence}">Confianza ${s.confidence}</span><br>
+          ${esc(s.licencia)} · ${esc(s.autor || 'autor desconocido')}<br><a href="${esc(s.pagina)}" target="_blank" rel="noopener">Ver origen ↗</a>
+          <div class="acts"><button class="ok" onclick="approve(${r.id},${i},this)">Aprobar</button><button class="bad" onclick="rejectSug(${r.id},${i})">Descartar</button></div>
+        </div>`).join('')}</div>` : ''}
+    </div>`).join('') || '<p style="padding:20px;color:#666">Sin resultados.</p>';
+}
+function pick(id){ upId = id; $('#file').value = ''; $('#file').click(); }
+// Reduce fotos grandes del celular antes de subir (el servidor hace la versión final)
+function shrink(file){ return new Promise((res, rej) => { const img = new Image(); img.onload = () => { const k = Math.min(1, 2000 / Math.max(img.width, img.height)); const c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); res(c.toDataURL('image/jpeg', .9)); URL.revokeObjectURL(img.src); }; img.onerror = () => rej(new Error('No se pudo leer la imagen')); img.src = URL.createObjectURL(file); }); }
+$('#file').onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { toast('Subiendo y optimizando…'); const dataUrl = await shrink(f); const r = await api('upload', {id: upId, dataUrl}); toast(`Foto guardada (${Math.round(r.bytes / 1024)} KB, WebP 800×800)`); await load(); }
+  catch(err){ toast('⚠️ ' + err.message); }
+};
+async function suggest(id, btn){ btn.disabled = true; try { const r = await api('suggest', {id}); toast(r.suggestions.length ? `${r.suggestions.length} sugerencias para revisar` : 'Sin resultados con licencia libre'); await load(); } catch(e){ toast('⚠️ ' + e.message); } btn.disabled = false; }
+async function approve(id, index, btn){ btn.disabled = true; try { await api('approve', {id, index}); toast('Foto aprobada y publicada'); await load(); } catch(e){ toast('⚠️ ' + e.message); btn.disabled = false; } }
+async function rejectSug(id, index){ try { await api('reject', {id, index}); await load(); } catch(e){ toast('⚠️ ' + e.message); } }
+async function removeImg(id){ if (!confirm('¿Quitar la foto de este producto?')) return; try { await api('reject', {id}); toast('Foto retirada'); await load(); } catch(e){ toast('⚠️ ' + e.message); } }
+async function batch(){ const b = $('#batch'); b.disabled = true; b.textContent = 'Buscando…'; try { const r = await api('batch-suggest', {n: 10}); toast(`Procesados ${r.procesados.length}, quedan ${r.restantes} por buscar${r.fallidos.length ? `, ${r.fallidos.length} fallaron` : ''}`); await load(); } catch(e){ toast('⚠️ ' + e.message); } b.disabled = false; b.textContent = '🔎 Buscar sugerencias (lote de 10)'; }
+function csv(){
+  const lines = [['id','producto','categoria','estado','confianza','origen','licencia','credito'].join(',')].concat(DATA.rows.map(r => [r.id, r.nombre, r.cat, r.status, r.confidence || '', r.source || '', r.license || '', r.credit || ''].map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')));
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + lines.join('\n')], {type:'text/csv'})); a.download = 'reporte-fotos-catalogo.csv'; a.click();
+}
+if (TOKEN) load().catch(() => show(false));
+</script>
+</body>
+</html>

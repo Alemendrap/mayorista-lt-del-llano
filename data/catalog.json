@@ -1,0 +1,1373 @@
+{
+ "version": 1,
+ "actualizado": "2026-11-05",
+ "categorias": [
+  {
+   "id": "cementos",
+   "label": "Cementos & Mezclas",
+   "sub": "Argos, San Marcos, Tequendama, Sika"
+  },
+  {
+   "id": "ladrillos",
+   "label": "Ladrillos & Bloques",
+   "sub": "Bloques, Bloquelón, malla electrosoldada"
+  },
+  {
+   "id": "hierro",
+   "label": "Hierro & Acero",
+   "sub": "Varillas, perfiles, ángulos, flejes"
+  },
+  {
+   "id": "tuberia",
+   "label": "Tubería & PVC",
+   "sub": "Sanitario, presión, conduit y accesorios"
+  },
+  {
+   "id": "herramientas",
+   "label": "Herramientas",
+   "sub": "Discos, brochas, rodillos, lijas, guantes"
+  },
+  {
+   "id": "aditivos",
+   "label": "Aditivos & Químicos",
+   "sub": "Thinner, limpiador PVC, pinturas, selladores"
+  },
+  {
+   "id": "electrico",
+   "label": "Eléctrico",
+   "sub": "Interruptores, tomacorrientes, cables"
+  },
+  {
+   "id": "madera",
+   "label": "Madera & Varios",
+   "sub": "Tabla burra, caballetes, postes eucalipto"
+  },
+  {
+   "id": "otros",
+   "label": "Otros",
+   "sub": "Mangueras, transporte, marcos, lona"
+  }
+ ],
+ "productos": [
+  {
+   "id": 1,
+   "cat": "cementos",
+   "nombre": "Cemento Argos x 50 kg",
+   "sub": "Bulto 50 kg · Uso estructural",
+   "u": "bulto",
+   "precio": null,
+   "marca": "Argos",
+   "referencia": null
+  },
+  {
+   "id": 2,
+   "cat": "cementos",
+   "nombre": "Cemento San Marcos x 50 kg",
+   "sub": "Bulto 50 kg · Alta resistencia",
+   "u": "bulto",
+   "precio": null,
+   "marca": "San Marcos",
+   "referencia": null
+  },
+  {
+   "id": 3,
+   "cat": "cementos",
+   "nombre": "Cemento Tequendama x 50 kg",
+   "sub": "Bulto 50 kg · Uso general",
+   "u": "bulto",
+   "precio": null,
+   "marca": "Tequendama",
+   "referencia": null
+  },
+  {
+   "id": 4,
+   "cat": "cementos",
+   "nombre": "Sika 101 Mortero Plus",
+   "sub": "Impermeabilizante para mortero",
+   "u": "unidad",
+   "precio": null,
+   "marca": "Sika",
+   "referencia": null
+  },
+  {
+   "id": 5,
+   "cat": "cementos",
+   "nombre": "Pega Enchape Sika x 50 kg",
+   "sub": "Adhesivo cerámico para pisos y paredes",
+   "u": "bulto",
+   "precio": null,
+   "marca": "Sika",
+   "referencia": null
+  },
+  {
+   "id": 6,
+   "cat": "cementos",
+   "nombre": "Caneca Supermastick",
+   "sub": "Adhesivo flexible de alto rendimiento",
+   "u": "caneca",
+   "precio": null,
+   "marca": "Supermastick",
+   "referencia": null
+  },
+  {
+   "id": 7,
+   "cat": "ladrillos",
+   "nombre": "Bloque Liso 10×20×30",
+   "sub": "Bloque de concreto vibroprensado",
+   "u": "bloque",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 8,
+   "cat": "ladrillos",
+   "nombre": "Bloque Liso — varias medidas",
+   "sub": "Diferentes dimensiones disponibles",
+   "u": "bloque",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 9,
+   "cat": "ladrillos",
+   "nombre": "Bloque 9×22×33 Tradicional",
+   "sub": "Bloque estándar para muros",
+   "u": "bloque",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 10,
+   "cat": "ladrillos",
+   "nombre": "Bloque 9×22×31",
+   "sub": "Bloque compacto para muros",
+   "u": "bloque",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 11,
+   "cat": "ladrillos",
+   "nombre": "Bloquelón Santa Fe",
+   "sub": "Bloque pesado para muros de carga",
+   "u": "bloque",
+   "precio": null,
+   "marca": "Santa Fe",
+   "referencia": null
+  },
+  {
+   "id": 12,
+   "cat": "ladrillos",
+   "nombre": "Malla Electrosoldada 4 mm",
+   "sub": "Panel · Para placas y pisos",
+   "u": "panel",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 13,
+   "cat": "ladrillos",
+   "nombre": "Malla Electrosoldada 5 mm",
+   "sub": "Panel · Refuerzo estructural",
+   "u": "panel",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 14,
+   "cat": "hierro",
+   "nombre": "Varilla 1/2\"",
+   "sub": "Corrugada grado 60 · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 15,
+   "cat": "hierro",
+   "nombre": "Varilla 3/8\"",
+   "sub": "Corrugada grado 60 · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 16,
+   "cat": "hierro",
+   "nombre": "Varilla 1/4\"",
+   "sub": "Corrugada · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 17,
+   "cat": "hierro",
+   "nombre": "Varilla 5/8\"",
+   "sub": "Corrugada grado 60 · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 18,
+   "cat": "hierro",
+   "nombre": "Varilla 9 mm",
+   "sub": "Corrugada · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 19,
+   "cat": "hierro",
+   "nombre": "Varilla 11 mm",
+   "sub": "Corrugada · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 20,
+   "cat": "hierro",
+   "nombre": "Varilla 12 mm",
+   "sub": "Corrugada · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 21,
+   "cat": "hierro",
+   "nombre": "Varilla 8.5 mm",
+   "sub": "Corrugada · 6 m",
+   "u": "varilla",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 22,
+   "cat": "hierro",
+   "nombre": "Perfil C 200×80",
+   "sub": "Perfil estructural en C",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 23,
+   "cat": "hierro",
+   "nombre": "Perfil C 50×50",
+   "sub": "Perfil estructural en C",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 24,
+   "cat": "hierro",
+   "nombre": "Perfil C 50×100",
+   "sub": "Perfil estructural en C",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 25,
+   "cat": "hierro",
+   "nombre": "Perfil Colmena",
+   "sub": "Perfil metálico aligerado",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 26,
+   "cat": "hierro",
+   "nombre": "Perfil Perfiacero",
+   "sub": "Perfil liviano galvanizado",
+   "u": "unidad",
+   "precio": null,
+   "marca": "Perfiacero",
+   "referencia": null
+  },
+  {
+   "id": 27,
+   "cat": "hierro",
+   "nombre": "Tubo Cuadrado",
+   "sub": "Metálico · varios calibres y secciones",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 28,
+   "cat": "hierro",
+   "nombre": "Tubo Rectangular",
+   "sub": "Metálico · varios calibres y secciones",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 29,
+   "cat": "hierro",
+   "nombre": "Tubo Redondo Galvanizado",
+   "sub": "Metálico · varios diámetros",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 30,
+   "cat": "hierro",
+   "nombre": "Ángulo 2\" × 1/4\"",
+   "sub": "Ángulo estructural de acero",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 31,
+   "cat": "hierro",
+   "nombre": "Ángulo 2\" × 1/8\"",
+   "sub": "Ángulo estructural de acero",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 32,
+   "cat": "hierro",
+   "nombre": "Ángulo 2\" × 3/16\"",
+   "sub": "Ángulo estructural de acero",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 33,
+   "cat": "hierro",
+   "nombre": "Ángulo 3\" × 3/16\"",
+   "sub": "Ángulo estructural de acero",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 34,
+   "cat": "hierro",
+   "nombre": "Ángulo 3\" × 1/4\"",
+   "sub": "Ángulo estructural de acero",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 35,
+   "cat": "hierro",
+   "nombre": "Ángulo 3\" × 5/16\"",
+   "sub": "Ángulo estructural de acero",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 36,
+   "cat": "hierro",
+   "nombre": "Ángulo 4\" × 4\"",
+   "sub": "Ángulo pesado para estructuras",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 37,
+   "cat": "hierro",
+   "nombre": "Platina",
+   "sub": "Varios anchos y espesores",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 38,
+   "cat": "hierro",
+   "nombre": "Lámina Metaldeck",
+   "sub": "Para placas colaborantes",
+   "u": "lámina",
+   "precio": null,
+   "marca": "Metaldeck",
+   "referencia": null
+  },
+  {
+   "id": 39,
+   "cat": "hierro",
+   "nombre": "Alambre de Púa 12.5",
+   "sub": "Rollo para cerramiento",
+   "u": "rollo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 40,
+   "cat": "hierro",
+   "nombre": "Alambre de Púa 14.5",
+   "sub": "Rollo para cerramiento",
+   "u": "rollo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 41,
+   "cat": "hierro",
+   "nombre": "Alambre Negro",
+   "sub": "Para amarre de hierro · por kilo",
+   "u": "kg",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 42,
+   "cat": "hierro",
+   "nombre": "Grapas de Cerramiento",
+   "sub": "Varios tamaños · por kilo",
+   "u": "kg",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 43,
+   "cat": "hierro",
+   "nombre": "Amarres Metálicos",
+   "sub": "Por kilo",
+   "u": "kg",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 44,
+   "cat": "hierro",
+   "nombre": "Tornillos",
+   "sub": "Varios tipos y medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 45,
+   "cat": "hierro",
+   "nombre": "Tuercas",
+   "sub": "Varios diámetros",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 46,
+   "cat": "hierro",
+   "nombre": "Arandelas",
+   "sub": "Planas y de presión",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 47,
+   "cat": "hierro",
+   "nombre": "Pernos",
+   "sub": "Varios tamaños",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 48,
+   "cat": "hierro",
+   "nombre": "Fleje 10×15",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 49,
+   "cat": "hierro",
+   "nombre": "Fleje 10×20",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 50,
+   "cat": "hierro",
+   "nombre": "Fleje 15×15",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 51,
+   "cat": "hierro",
+   "nombre": "Fleje 15×20",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 52,
+   "cat": "hierro",
+   "nombre": "Fleje 17×17",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 53,
+   "cat": "hierro",
+   "nombre": "Fleje 17×20",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 54,
+   "cat": "hierro",
+   "nombre": "Fleje 18×18",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 55,
+   "cat": "hierro",
+   "nombre": "Fleje 18×20",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 56,
+   "cat": "hierro",
+   "nombre": "Fleje 20×20",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 57,
+   "cat": "hierro",
+   "nombre": "Fleje 20×25",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 58,
+   "cat": "hierro",
+   "nombre": "Fleje 22×22",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 59,
+   "cat": "hierro",
+   "nombre": "Fleje 25×25",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 60,
+   "cat": "hierro",
+   "nombre": "Fleje 30×30",
+   "sub": "Fleje metálico para amarre",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 61,
+   "cat": "tuberia",
+   "nombre": "Tubo Sanitario 2\"",
+   "sub": "PVC sanitario · 6 m",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 62,
+   "cat": "tuberia",
+   "nombre": "Tubo Sanitario 3\"",
+   "sub": "PVC sanitario · 6 m",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 63,
+   "cat": "tuberia",
+   "nombre": "Tubo Sanitario 4\"",
+   "sub": "PVC sanitario · 6 m",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 64,
+   "cat": "tuberia",
+   "nombre": "Tubo Sanitario 6\"",
+   "sub": "PVC sanitario · 6 m",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 65,
+   "cat": "tuberia",
+   "nombre": "Tubo Sanitario 8\"",
+   "sub": "PVC sanitario · 6 m",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 66,
+   "cat": "tuberia",
+   "nombre": "Tubo Presión 1/2\"",
+   "sub": "PVC presión · agua potable",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 67,
+   "cat": "tuberia",
+   "nombre": "Tubo Presión 3/4\"",
+   "sub": "PVC presión · agua potable",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 68,
+   "cat": "tuberia",
+   "nombre": "Tubo Presión 1\"",
+   "sub": "PVC presión · agua potable",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 69,
+   "cat": "tuberia",
+   "nombre": "Tubo Conduit 1/2\"",
+   "sub": "PVC conduit eléctrico",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 70,
+   "cat": "tuberia",
+   "nombre": "Tubo Conduit 3/4\"",
+   "sub": "PVC conduit eléctrico",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 71,
+   "cat": "tuberia",
+   "nombre": "Tubo Conduit 1\"",
+   "sub": "PVC conduit eléctrico",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 72,
+   "cat": "tuberia",
+   "nombre": "Tubo Galvanizado",
+   "sub": "Varios diámetros",
+   "u": "tubo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 73,
+   "cat": "tuberia",
+   "nombre": "Codo CxC Sanitario",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 74,
+   "cat": "tuberia",
+   "nombre": "Codo CxE Sanitario",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 75,
+   "cat": "tuberia",
+   "nombre": "Semicodo Sanitario",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 76,
+   "cat": "tuberia",
+   "nombre": "Yee Sanitaria",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 77,
+   "cat": "tuberia",
+   "nombre": "Tee Sanitaria",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 78,
+   "cat": "tuberia",
+   "nombre": "Unión Sanitaria",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 79,
+   "cat": "tuberia",
+   "nombre": "Buje Sanitario",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 80,
+   "cat": "tuberia",
+   "nombre": "Sifón PVC",
+   "sub": "2\" y 3\"",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 81,
+   "cat": "tuberia",
+   "nombre": "Tapón Prueba",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 82,
+   "cat": "tuberia",
+   "nombre": "Codo Presión",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 83,
+   "cat": "tuberia",
+   "nombre": "Tee Presión",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 84,
+   "cat": "tuberia",
+   "nombre": "Universal PVC",
+   "sub": "1/2\", 3/4\" y 1\"",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 85,
+   "cat": "tuberia",
+   "nombre": "Adaptador Macho PVC",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 86,
+   "cat": "tuberia",
+   "nombre": "Adaptador Hembra PVC",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 87,
+   "cat": "tuberia",
+   "nombre": "Buje Presión",
+   "sub": "Todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 88,
+   "cat": "tuberia",
+   "nombre": "Curva Conduit",
+   "sub": "1/2\", 3/4\" y 1\"",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 89,
+   "cat": "tuberia",
+   "nombre": "Terminal Conduit",
+   "sub": "1/2\", 3/4\" y 1\"",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 90,
+   "cat": "tuberia",
+   "nombre": "Caja 4×4 PVC",
+   "sub": "Para instalaciones eléctricas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 91,
+   "cat": "tuberia",
+   "nombre": "Caja 5800 PVC",
+   "sub": "Para instalaciones eléctricas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 92,
+   "cat": "tuberia",
+   "nombre": "Válvula Bola PVC",
+   "sub": "1/2\", 3/4\" y 1\"",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 93,
+   "cat": "tuberia",
+   "nombre": "Llave de Jardín",
+   "sub": "Con rosca galvanizada",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 94,
+   "cat": "tuberia",
+   "nombre": "Flotador Universal",
+   "sub": "Para tanque de almacenamiento",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 95,
+   "cat": "tuberia",
+   "nombre": "Acople Lavaplatos",
+   "sub": "PVC · universal",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 96,
+   "cat": "tuberia",
+   "nombre": "Acople Lavamanos",
+   "sub": "PVC · universal",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 97,
+   "cat": "tuberia",
+   "nombre": "Rejilla de Piso",
+   "sub": "Varios tamaños y acabados",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 98,
+   "cat": "tuberia",
+   "nombre": "Registro Ducha",
+   "sub": "Cromado / PVC",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 99,
+   "cat": "tuberia",
+   "nombre": "Tanque 1000 L",
+   "sub": "Plástico rotomoldeado vertical",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 100,
+   "cat": "tuberia",
+   "nombre": "Tanque 5000 L",
+   "sub": "Gran capacidad rotomoldeado",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 101,
+   "cat": "tuberia",
+   "nombre": "Lavaplatos",
+   "sub": "Acero inoxidable · todas las medidas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 102,
+   "cat": "herramientas",
+   "nombre": "Disco Diamantado",
+   "sub": "Para pulidora · corte en seco",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 103,
+   "cat": "herramientas",
+   "nombre": "Brocha 3\"",
+   "sub": "Cerda natural · para pintura",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 104,
+   "cat": "herramientas",
+   "nombre": "Rodillo 3\"",
+   "sub": "Para pintura en zonas pequeñas",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 105,
+   "cat": "herramientas",
+   "nombre": "Rodillo 9\"",
+   "sub": "Para pintura en paredes",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 106,
+   "cat": "herramientas",
+   "nombre": "Lijas",
+   "sub": "Varios granos disponibles",
+   "u": "pliego",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 107,
+   "cat": "herramientas",
+   "nombre": "Guantes de Cuero",
+   "sub": "Talla S / M / L",
+   "u": "par",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 108,
+   "cat": "herramientas",
+   "nombre": "Peinazo",
+   "sub": "Para nivelación de enchape",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 109,
+   "cat": "aditivos",
+   "nombre": "Thinner",
+   "sub": "Galón / caneca · diluyente",
+   "u": "galón",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 110,
+   "cat": "aditivos",
+   "nombre": "Limpiador PVC",
+   "sub": "Por litro · para uniones PVC",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 111,
+   "cat": "aditivos",
+   "nombre": "Pintura Negra",
+   "sub": "Galón / cuñete · para obra",
+   "u": "galón",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 112,
+   "cat": "aditivos",
+   "nombre": "Pintura Blanca",
+   "sub": "Galón / cuñete · vinilo interior",
+   "u": "galón",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 113,
+   "cat": "aditivos",
+   "nombre": "Pintura Azul",
+   "sub": "Galón / cuñete · acabado mate",
+   "u": "galón",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 114,
+   "cat": "aditivos",
+   "nombre": "Pintura Roja",
+   "sub": "Galón / cuñete · señalización",
+   "u": "galón",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 115,
+   "cat": "aditivos",
+   "nombre": "Boquilla Corona",
+   "sub": "Sellador de juntas",
+   "u": "unidad",
+   "precio": null,
+   "marca": "Corona",
+   "referencia": null
+  },
+  {
+   "id": 116,
+   "cat": "aditivos",
+   "nombre": "Cinta Aislante",
+   "sub": "Rollo 18 m · varios colores",
+   "u": "rollo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 117,
+   "cat": "electrico",
+   "nombre": "Interruptor Doble",
+   "sub": "Para empotrar · 10 A",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 118,
+   "cat": "electrico",
+   "nombre": "Interruptor Sencillo",
+   "sub": "Para empotrar · 10 A",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 119,
+   "cat": "electrico",
+   "nombre": "Tomacorriente",
+   "sub": "Doble · con polo a tierra · 15 A",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 120,
+   "cat": "electrico",
+   "nombre": "Cable #12",
+   "sub": "Rollo 100 m · varios colores",
+   "u": "rollo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 121,
+   "cat": "electrico",
+   "nombre": "Cable #14",
+   "sub": "Rollo 100 m · varios colores",
+   "u": "rollo",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 122,
+   "cat": "madera",
+   "nombre": "Tabla Burra",
+   "sub": "Madera aserrada para formaleta",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 123,
+   "cat": "madera",
+   "nombre": "Caballete Nuevo",
+   "sub": "Para formaleta",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 124,
+   "cat": "madera",
+   "nombre": "Caballete Antiguo",
+   "sub": "Usado · para formaleta de obra",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 125,
+   "cat": "madera",
+   "nombre": "Postes de Eucalipto",
+   "sub": "Varios largos · para cerramientos",
+   "u": "poste",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 126,
+   "cat": "otros",
+   "nombre": "Manguera 1/2\"",
+   "sub": "Por metro o rollo · PVC flexible",
+   "u": "metro",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 127,
+   "cat": "otros",
+   "nombre": "Manguera 1\"",
+   "sub": "Por metro o rollo · PVC flexible",
+   "u": "metro",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 128,
+   "cat": "otros",
+   "nombre": "Neumáticos Moto",
+   "sub": "Varias medidas disponibles",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 129,
+   "cat": "otros",
+   "nombre": "Kit Bebedero",
+   "sub": "Para ganadería · completo",
+   "u": "kit",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 130,
+   "cat": "otros",
+   "nombre": "Marco de Puerta",
+   "sub": "Metálico / madera · varios tamaños",
+   "u": "unidad",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 131,
+   "cat": "otros",
+   "nombre": "Lona",
+   "sub": "Por metro cuadrado · multiusos",
+   "u": "m²",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  },
+  {
+   "id": 132,
+   "cat": "otros",
+   "nombre": "Servicio de Transporte",
+   "sub": "Despacho a obra en la región",
+   "u": "servicio",
+   "precio": null,
+   "marca": null,
+   "referencia": null
+  }
+ ]
+}
