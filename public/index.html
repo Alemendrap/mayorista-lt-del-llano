@@ -1297,7 +1297,7 @@ const CONFIG = {
   // Nunca pongas una clave de API aquí: este archivo es público.
   // El servidor recibe {mensaje, historial, carrito} y responde {respuesta, productos:[ids]}.
   aiEndpoint: '/api/chat',   // Se activa solo si el servidor tiene la IA configurada (ver README)
-  apiBase: '',               // Vacío = mismo dominio. Si la tienda y el servidor están en dominios distintos, pon la URL del servidor.
+  apiBase: (location.hostname.endsWith('github.io') ? 'https://mayorista-lt-del-llano.marialegarciapedroza.workers.dev' : ''),               // Vacío = mismo dominio. Si la tienda y el servidor están en dominios distintos, pon la URL del servidor.
 
   // Productos destacados en el inicio (ids del catálogo)
   // Productos destacados en el inicio, en orden de preferencia. Solo se muestran los que YA tienen foto
