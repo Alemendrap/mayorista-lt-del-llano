@@ -100,7 +100,8 @@ export default {
       } catch (e) {
         console.error(JSON.stringify({ msg: 'chat_fail', status: e.status, detail: e.detail }));
         if (e.status === 429) return json({ error: 'El asesor virtual alcanzó su límite gratuito por ahora. Escríbenos por WhatsApp y te atendemos.', code: 'budget' }, 503);
-        return json({ error: 'El asesor virtual no está disponible en este momento.', code: 'upstream' }, 502);
+        let why = ''; try { why = String(JSON.parse(e.detail).error.message || '').slice(0, 160); } catch (_) {}
+        return json({ error: 'El asesor virtual no está disponible en este momento.', code: 'upstream', upstream_status: e.status || null, upstream_reason: why }, 502);
       }
     }
     return json({ error: 'No encontrado' }, 404);
