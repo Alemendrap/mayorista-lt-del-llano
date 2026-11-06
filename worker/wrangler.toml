@@ -1,0 +1,8 @@
+# Asesor IA de Mayorista LT del Llano (Cloudflare Workers, plan gratis)
+name = "asesor-lt-del-llano"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://alemendrap.github.io"
+# GEMINI_API_KEY se configura como SECRETO en el panel de Cloudflare (nunca aquí)

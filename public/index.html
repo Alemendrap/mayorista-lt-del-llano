@@ -1473,7 +1473,7 @@ async function loadServer(){
     Object.assign(SERVER, await h.json(), {online:true});
     const r = await fetch(API('/api/catalog')); if (!r.ok) throw 0;
     const data = await r.json();
-    data.productos.forEach(sp => { const p = prod(sp.id); if (p) Object.assign(p, {img: sp.img ? API(sp.img) : p.img, imgCredit: sp.img ? sp.imgCredit : p.imgCredit, precio: sp.precio || p.precio, marca: sp.marca}); });
+    data.productos.forEach(sp => { const p = prod(sp.id); if (p) Object.assign(p, {img: p.img || (sp.img ? API(sp.img) : null), imgCredit: p.img ? p.imgCredit : sp.imgCredit, precio: sp.precio || p.precio, marca: sp.marca}); });
   } catch(e) { SERVER.online = false; }
   updateAIStatus(); renderAll();
 }
