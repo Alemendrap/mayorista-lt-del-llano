@@ -1,6 +1,7 @@
 # Asesor IA de Mayorista LT del Llano (Cloudflare Workers, plan gratis)
-name = "asesor-lt-del-llano"
-main = "worker.js"
+# El nombre debe coincidir con el "Project name" de Cloudflare.
+name = "mayorista-lt-del-llano"
+main = "worker/worker.js"
 compatibility_date = "2026-10-01"
 
 [vars]

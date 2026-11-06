@@ -59,6 +59,6 @@ Para fotos oficiales de marca (Argos, Sika, Corona…), pídelas al asesor comer
 La tienda en GitHub Pages usa un servidor pequeño en Cloudflare Workers (plan gratis) que guarda la clave y conecta Gemini con el catálogo. El código está en `worker/` (se genera con `npm run build:worker` a partir de `server.js` y `data/`).
 
 1. Clave de Gemini: https://aistudio.google.com → Get API key. **No actives facturación** en ese proyecto: así nunca hay cobros (si se acaba la cuota gratis del día, el chat avisa y ofrece WhatsApp). En el plan gratis Google puede usar las conversaciones para mejorar sus productos.
-2. Cloudflare → Workers & Pages → Create → Import a repository → este repositorio → Root directory: `worker`.
+2. Cloudflare → Workers & Pages → Create → Import a repository → este repositorio → Project name `mayorista-lt-del-llano`, Build command vacío → Deploy.
 3. En el Worker → Settings → Variables and Secrets → agrega el secreto `GEMINI_API_KEY`.
-4. Copia la dirección del Worker (`https://asesor-lt-del-llano.<tu-cuenta>.workers.dev`) en `CONFIG.apiBase` de `public/index.html`.
+4. Copia la dirección del Worker (`https://mayorista-lt-del-llano.<tu-cuenta>.workers.dev`) en `CONFIG.apiBase` de `public/index.html`.
