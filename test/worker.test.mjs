@@ -28,7 +28,7 @@ await t('chat: busca y agrega 2 Cemento Argos (id 1) con herramientas', async ()
   const r = await call('/api/chat', { messages: [{ role: 'user', text: 'agrega 2 bultos de cemento argos' }], cart: [] }); const d = await r.json();
   assert.strictEqual(r.status, 200, JSON.stringify(d)); assert.deepStrictEqual(d.actions, [{ type: 'add_to_cart', id: 1, qty: 2 }]); assert(d.reply.includes('Cemento Argos'));
   const last = seen[seen.length - 1];
-  assert.strictEqual(last.key, 'AIza-TEST'); assert(last.url.includes('gemini-flash-latest')); assert(last.body.tools[0].functionDeclarations.length === 6);
+  assert.strictEqual(last.key, 'AIza-TEST'); assert(last.url.includes('gemini-flash-lite-latest')); assert(last.body.tools[0].functionDeclarations.length === 6);
   assert(seen[1].body.contents[1].parts[0].thoughtSignature === 'abc', 'firma devuelta');
   assert(last.body.contents[last.body.contents.length - 1].role === 'user');
 });

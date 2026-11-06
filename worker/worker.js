@@ -175,18 +175,19 @@ const SYSTEM_G = SYSTEM.replace('"LT AI"', '"Asesor LT"');
 
 // Si el modelo principal está saturado (503) o no existe (404), se reintenta y luego se usa uno más liviano.
 async function callGemini(env, contents) {
-  const models = [env.GEMINI_MODEL || 'gemini-flash-latest', ...(env.GEMINI_FALLBACK_MODELS || 'gemini-flash-lite-latest').split(',').map(x => x.trim()).filter(Boolean)];
+  const models = [env.GEMINI_MODEL || 'gemini-flash-lite-latest', ...(env.GEMINI_FALLBACK_MODELS || 'gemini-flash-latest').split(',').map(x => x.trim()).filter(Boolean)];
   const base = env.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com';
   let lastErr;
   for (const model of [...new Set(models)]) {
     for (let attempt = 0; attempt < 2; attempt++) {
-      const r = await fetch(`${base}/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
+      let r;
+      try { r = await fetch(`${base}/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
         body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM_G }] }, contents, tools: [{ functionDeclarations: DECLS }],
           generationConfig: { temperature: 0.4, maxOutputTokens: +(env.MAX_OUTPUT_TOKENS || 1200) } }),
-        signal: AbortSignal.timeout(30000),
-      });
+        signal: AbortSignal.timeout(+(env.GEMINI_TIMEOUT_MS || 15000)),
+      }); } catch (e) { lastErr = Object.assign(new Error('gemini timeout'), { status: 504, detail: '{"error":{"message":"tiempo de espera agotado"}}' }); break; }
       if (r.ok) return r.json();
       lastErr = new Error('gemini ' + r.status); lastErr.status = r.status; lastErr.detail = (await r.text().catch(() => '')).slice(0, 300);
       if (r.status === 503 || r.status === 500) { if (attempt === 0) { await new Promise(res => setTimeout(res, 700)); continue; } break; }
@@ -251,7 +252,7 @@ export default {
     if (origin && !allowed.includes(origin)) return json({ error: 'Origen no permitido' }, 403);
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors });
 
-    if (url.pathname === '/api/health') return json({ ok: true, ai: !!env.GEMINI_API_KEY, model: env.GEMINI_API_KEY ? (env.GEMINI_MODEL || 'gemini-flash-latest') : null, proveedor: 'gemini', serverSTT: false, productos: catalog.productos.length });
+    if (url.pathname === '/api/health') return json({ ok: true, ai: !!env.GEMINI_API_KEY, model: env.GEMINI_API_KEY ? (env.GEMINI_MODEL || 'gemini-flash-lite-latest') : null, proveedor: 'gemini', serverSTT: false, productos: catalog.productos.length });
     if (url.pathname === '/api/catalog') return json({ categorias: catalog.categorias, productos: catalog.productos.map(publicProduct) });
     if (url.pathname === '/api/chat' && req.method === 'POST') {
       if (!env.GEMINI_API_KEY) return json({ error: 'IA no configurada', code: 'no_ai' }, 503);
