@@ -1,4 +1,28 @@
 {
+ "1": {
+  "status": "aprobada",
+  "confidence": "media",
+  "source": "propietario",
+  "license": "Suministrada por la tienda",
+  "credit": null,
+  "file": "1.webp",
+  "hash": "495718727e",
+  "v": 1,
+  "approvedBy": "propietario (chat 2026-11-06)",
+  "updated": "2026-11-06T15:50:16.858Z"
+ },
+ "7": {
+  "status": "aprobada",
+  "confidence": "media",
+  "source": "propietario",
+  "license": "Suministrada por la tienda",
+  "credit": null,
+  "file": "7.webp",
+  "hash": "73360bc001",
+  "v": 1,
+  "approvedBy": "propietario (chat 2026-11-06)",
+  "updated": "2026-11-06T15:50:16.974Z"
+ },
  "14": {
   "status": "aprobada",
   "confidence": "media",
@@ -11,6 +35,18 @@
   "v": 1,
   "approvedBy": "propietario (chat 2026-11-05)",
   "updated": "2026-11-05T21:15:48.254Z"
+ },
+ "29": {
+  "status": "aprobada",
+  "confidence": "media",
+  "source": "propietario",
+  "license": "Suministrada por la tienda",
+  "credit": null,
+  "file": "29.webp",
+  "hash": "40821c49d7",
+  "v": 1,
+  "approvedBy": "propietario (chat 2026-11-06)",
+  "updated": "2026-11-06T15:50:17.049Z"
  },
  "39": {
   "status": "aprobada",

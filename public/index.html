@@ -1232,7 +1232,6 @@ body.lt-open .lt-ai-chat{opacity:1;transform:none;pointer-events:all;visibility:
       </div>
     </div>
     <div class="lt-ai-actions">
-      <button class="lt-ai-icon-btn" id="lt-voice-toggle" onclick="toggleVoiceReplies()" aria-pressed="false" aria-label="Activar respuestas habladas" title="Respuestas habladas">🔈</button>
       <button class="lt-ai-icon-btn" onclick="newLTConversation()" aria-label="Nueva conversación" title="Nueva conversación">↻</button>
       <button class="lt-ai-icon-btn" onclick="closeLTChat()" aria-label="Cerrar chat" title="Cerrar">×</button>
     </div>
@@ -1243,14 +1242,10 @@ body.lt-open .lt-ai-chat{opacity:1;transform:none;pointer-events:all;visibility:
   <form class="lt-ai-input-area" onsubmit="event.preventDefault();ltSend()">
     <div class="lt-ai-input-wrap">
       <textarea id="lt-ai-input" rows="1" maxlength="600" placeholder="Ej: necesito 20 bultos de cemento" aria-label="Escribe tu mensaje" onkeydown="ltKeydown(event)" oninput="autoResize(this)"></textarea>
-      <button type="button" id="lt-ai-mic" onclick="toggleMic()" aria-label="Hablar con el asesor" title="Pulsa para hablar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="22"/></svg>
-      </button>
       <button type="submit" id="lt-ai-send" aria-label="Enviar mensaje">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2"/></svg>
       </button>
     </div>
-    <div class="lt-voice-hint" id="lt-voice-hint" role="status"></div>
     <small>Los cálculos son aproximados. Un asesor confirma precios y cantidades.</small>
   </form>
 </section>
@@ -1307,7 +1302,7 @@ const CONFIG = {
   // Productos destacados en el inicio (ids del catálogo)
   // Productos destacados en el inicio, en orden de preferencia. Solo se muestran los que YA tienen foto
   // (máx. 4); cuando subas la foto del cemento, el bloque o el tubo, aparecen solos de primeros.
-  destacados: [1, 7, 14, 63, 39, 77, 119, 107, 46, 126],
+  destacados: [1, 7, 14, 29, 63, 39, 77, 119],
 
   // Testimonios REALES (ej. copiados de tus reseñas de Google). Vacío = la sección no se muestra.
   // { texto:'...', nombre:'...', rol:'...', estrellas:5 }
@@ -1467,7 +1462,7 @@ const RAW = [
   [131,'otros','Lona','Por metro cuadrado · multiusos','m²'],
   [132,'otros','Servicio de Transporte','Despacho a obra en la región','servicio'],
 ];
-const LOCAL_IMG = {"14":["img/productos/14.webp?v=1","Foto: W.carter · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"],"39":["img/productos/39.webp?v=1","Foto: Logan King · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"42":["img/productos/42.webp?v=1","Foto: Caoimhin ceallach · CC0 · Wikimedia Commons (foto de referencia)"],"44":["img/productos/44.webp?v=1","Foto: Brianiac · Dominio público · Wikimedia Commons (foto de referencia)"],"45":["img/productos/45.webp?v=1","Foto: MH · Dominio público · Wikimedia Commons (foto de referencia)"],"46":["img/productos/46.webp?v=1","Foto: Taylor 49 · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"],"47":["img/productos/47.webp?v=1","Foto: R. Henrik Nilsson · CC BY 4.0 · Wikimedia Commons (foto de referencia)"],"77":["img/productos/77.webp?v=1","Foto: Mini.fb · CC0 · Wikimedia Commons (foto de referencia)"],"97":["img/productos/97.webp?v=1","Foto: Ser Amantio di Nicolao · CC0 · Wikimedia Commons (foto de referencia)"],"105":["img/productos/105.webp?v=1","Foto: r. nial bradshaw · CC BY 2.0 · Wikimedia Commons (foto de referencia)"],"106":["img/productos/106.webp?v=1","Foto: Simon Eugster · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"107":["img/productos/107.webp?v=1","Foto: el cajon yacht club · CC BY 2.0 · Wikimedia Commons (foto de referencia)"],"116":["img/productos/116.webp?v=1","Foto: Emilian Robert Vicol · CC BY 2.0 · Wikimedia Commons (foto de referencia)"],"117":["img/productos/117.webp?v=1","Foto: Sokolikmawwer0 · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"118":["img/productos/118.webp?v=1","Foto: DemonDays64 · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"],"119":["img/productos/119.webp?v=1","Foto: Loadmaster (David R. Tribble) · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"122":["img/productos/122.webp?v=1","Foto: Alex Jones · CC0 · Wikimedia Commons (foto de referencia)"],"126":["img/productos/126.webp?v=1","Foto: Nandhp · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"131":["img/productos/131.webp?v=1","Foto: Quercus acuta · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"]}; // generado por scripts/embed-images.js
+const LOCAL_IMG = {"1":["img/productos/1.webp?v=1",null],"7":["img/productos/7.webp?v=1",null],"14":["img/productos/14.webp?v=1","Foto: W.carter · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"],"29":["img/productos/29.webp?v=1",null],"39":["img/productos/39.webp?v=1","Foto: Logan King · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"42":["img/productos/42.webp?v=1","Foto: Caoimhin ceallach · CC0 · Wikimedia Commons (foto de referencia)"],"44":["img/productos/44.webp?v=1","Foto: Brianiac · Dominio público · Wikimedia Commons (foto de referencia)"],"45":["img/productos/45.webp?v=1","Foto: MH · Dominio público · Wikimedia Commons (foto de referencia)"],"46":["img/productos/46.webp?v=1","Foto: Taylor 49 · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"],"47":["img/productos/47.webp?v=1","Foto: R. Henrik Nilsson · CC BY 4.0 · Wikimedia Commons (foto de referencia)"],"77":["img/productos/77.webp?v=1","Foto: Mini.fb · CC0 · Wikimedia Commons (foto de referencia)"],"97":["img/productos/97.webp?v=1","Foto: Ser Amantio di Nicolao · CC0 · Wikimedia Commons (foto de referencia)"],"105":["img/productos/105.webp?v=1","Foto: r. nial bradshaw · CC BY 2.0 · Wikimedia Commons (foto de referencia)"],"106":["img/productos/106.webp?v=1","Foto: Simon Eugster · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"107":["img/productos/107.webp?v=1","Foto: el cajon yacht club · CC BY 2.0 · Wikimedia Commons (foto de referencia)"],"116":["img/productos/116.webp?v=1","Foto: Emilian Robert Vicol · CC BY 2.0 · Wikimedia Commons (foto de referencia)"],"117":["img/productos/117.webp?v=1","Foto: Sokolikmawwer0 · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"118":["img/productos/118.webp?v=1","Foto: DemonDays64 · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"],"119":["img/productos/119.webp?v=1","Foto: Loadmaster (David R. Tribble) · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"122":["img/productos/122.webp?v=1","Foto: Alex Jones · CC0 · Wikimedia Commons (foto de referencia)"],"126":["img/productos/126.webp?v=1","Foto: Nandhp · CC BY-SA 3.0 · Wikimedia Commons (foto de referencia)"],"131":["img/productos/131.webp?v=1","Foto: Quercus acuta · CC BY-SA 4.0 · Wikimedia Commons (foto de referencia)"]}; // generado por scripts/embed-images.js
 const PRODUCTOS = RAW.map(([id,cat,nombre,sub,u,precio]) => ({id,cat,catLabel:CAT_LABEL[cat],nombre,sub,u:u||'unidad',precio:precio||null,img:LOCAL_IMG[id]?.[0]||null,imgCredit:LOCAL_IMG[id]?.[1]||null,marca:null}));
 const API = path => (CONFIG.apiBase || '') + path;
 const SERVER = {online:false, ai:false, serverSTT:false};
@@ -1631,7 +1626,8 @@ function filtered(){
   if (currentSort === 'za') list.sort((a, b) => b.nombre.localeCompare(a.nombre, 'es'));
   if (currentSort === 'p-asc') list.sort((a, b) => (a.precio ?? Infinity) - (b.precio ?? Infinity));
   if (currentSort === 'p-desc') list.sort((a, b) => (b.precio ?? -1) - (a.precio ?? -1));
-  return list;
+  // Los productos con foto siempre van primero (orden estable: se respeta el orden elegido dentro de cada grupo)
+  return list.filter(p => p.img).concat(list.filter(p => !p.img));
 }
 function priceLabel(p){ return p.precio ? `<b>${fmtCOP(p.precio)}</b> / ${p.u}` : `Precio por ${p.u}: a cotizar`; }
 function render(){
@@ -2213,8 +2209,8 @@ function ltLocal(raw){
 /* --- IA real (Claude) a través del servidor. Sin servidor/IA → motor básico local. --- */
 function updateAIStatus(){
   const ai = SERVER.online && SERVER.ai && CONFIG.aiEndpoint;
-  $('#lt-ai-status-text').textContent = ai ? 'Asesor con IA · en línea' : 'Asesor virtual · modo básico';
-  $('#lt-ai-context-text').textContent = ai ? `IA conectada al catálogo · ${PRODUCTOS.length} productos` : `Modo básico (sin IA) · ${PRODUCTOS.length} productos`;
+  $('#lt-ai-status-text').textContent = ai ? 'Asesor con IA · en línea' : 'Asesor virtual · responde al instante';
+  $('#lt-ai-context-text').textContent = ai ? `IA conectada al catálogo · ${PRODUCTOS.length} productos` : `Conectado al catálogo · ${PRODUCTOS.length} productos`;
   document.querySelector('.lt-ai-context').classList.toggle('basic', !ai);
   setupMic();
 }
@@ -2261,9 +2257,9 @@ async function ltReply(text){
 
 /* --- Voz: micrófono (pulsar para hablar) y respuestas habladas --- */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-const VOICE = {rec:null, recording:false, mediaRec:null, chunks:[], viaVoice:false, on: store.get('lt_voice', false), speaking:false};
+const VOICE = {rec:null, recording:false, mediaRec:null, chunks:[], viaVoice:false, on: false, speaking:false};
 function voiceHint(t){ $('#lt-voice-hint').textContent = t || ''; if (t) setTimeout(() => { if ($('#lt-voice-hint').textContent === t) $('#lt-voice-hint').textContent = ''; }, 6000); }
-function setupMic(){
+function setupMic(){ if (!$('#lt-ai-mic')) return;
   const can = !!SR || (SERVER.serverSTT && !!window.MediaRecorder && !!navigator.mediaDevices);
   $('#lt-ai-mic').title = can ? 'Pulsa para hablar' : 'Tu navegador no permite dictado por voz';
   $('#lt-ai-mic').dataset.can = can ? '1' : '';
@@ -2354,7 +2350,7 @@ const ltLog = () => $('#lt-ai-messages');
 function ltAppend(role, html, speakText, err){
   const m = document.createElement('div');
   m.className = 'lt-msg ' + role;
-  const replay = role === 'bot' && speakText && 'speechSynthesis' in window ? `<br><button type="button" class="lt-replay" data-act="speak" data-arg="${esc(speakText)}" aria-label="Escuchar respuesta">🔊 Escuchar</button>` : '';
+  const replay = false ? `<br><button type="button" class="lt-replay" data-act="speak" data-arg="${esc(speakText)}" aria-label="Escuchar respuesta">🔊 Escuchar</button>` : '';
   m.innerHTML = `<div class="lt-bubble${err ? ' err' : ''}">${html}${replay}</div>`;
   ltLog().appendChild(m);
   ltLog().scrollTop = ltLog().scrollHeight;
@@ -2370,7 +2366,7 @@ function setChips(list){
 }
 function ltWelcome(){
   ltAdd('bot', `¡Hola! 👋 Soy <b>LT AI</b>, el asesor virtual de ${esc(CONFIG.negocio)}. Puedo ayudarte a:
-    <ul><li>Encontrar productos del catálogo</li><li>Recomendarte materiales para tu obra</li><li>Calcular bloques, cemento y malla</li><li>Armar tu pedido y explicarte cómo pagar</li></ul>¿Qué vas a construir? También puedes hablarme con el 🎤.`);
+    <ul><li>Encontrar productos del catálogo</li><li>Recomendarte materiales para tu obra</li><li>Calcular bloques, cemento y malla</li><li>Armar tu pedido y explicarte cómo pagar</li></ul>¿Qué vas a construir?`);
   setChips(CHIPS_DEFAULT);
 }
 async function ltSend(preset){
